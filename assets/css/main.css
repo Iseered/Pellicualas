@@ -1,0 +1,235 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#conteItmenCarrusel{
+    height: 550px;
+    overflow: hidden;
+}
+
+.itemCarrusel{ 
+    height: 100%;
+    position: relative;
+}
+.targetCarusel{  
+    height: 100%;
+}
+.direcciones{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+
+/*nav-bar*/
+img{
+    width: 100%;
+    height: 100%;
+}
+header{
+    height: 100px;
+    position:fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: rgba(163, 155, 155, 0.548);
+    transition: all 0.5s ease;
+}
+header.active{
+    background-color: rgba(138, 135, 135, 0.781);
+    padding: 10px;
+}
+
+header.active ul li a{
+ color: rgb(68, 68, 68);
+}
+
+header.active img{
+    height: 80px;
+    width: 180px;
+    margin-right: 50%;
+}
+header img{
+    height:100px;
+    width: 200px;
+    margin-right:100%;
+    transition: all 0.5s ease;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link{
+color: rgb(46, 46, 46);
+text-decoration: none;
+font-weight: bold;
+}
+.logo{
+    padding: 0 40px;
+    line-height: 90px;
+}
+.menu-icon{
+    width: 30px;
+    height: 20px;
+}
+.menu-nav{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+.nav-iten-menu{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 90px;
+    text-transform: uppercase;
+    width: max-content;
+}
+.nav-link-menu:hover{
+    background-color: rgb(73, 21, 21);
+}
+.nav-link:hover{
+    color: white;
+    transition: 0.5s;
+}
+.nav-link-menu{
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+.nav-toggle{
+  color: white;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  line-height: 60px;
+  cursor: pointer; 
+
+  display: none;
+}
+
+ @media(max-width:768px){
+    body{
+        max-width: 100%;
+    }
+   
+    #conteItmenCarrusel{
+        overflow: hidden;
+    }
+    
+    .itemCarrusel{ 
+        height: 100%;
+        position: relative;
+    }
+    .targetCarusel{  
+        height: 100%;
+    }
+    .direcciones{
+        position:inherit;
+        top: 0;
+        height: 50%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .img-carrusel{
+        width: 100%;
+        height: 100%;
+    }
+     header{
+        height: 60px;
+        position:fixed;
+        width: 100%;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background: rgba(163, 155, 155, 0.233);
+        transition: 0.7s;
+    }
+
+    header.active{
+        background-color: rgba(107, 107, 107, 0.74);
+        padding: 10px;
+    }
+    
+    header.active ul li a{
+     color: aliceblue;
+    }
+     
+    header.active img{
+        height: 50px;
+        width: 100px;
+        margin-right: 50%;
+    }
+    header.active button img{
+        width: 30px;
+        height: 20px;
+        padding: 0;
+        display: block;
+        position:inherit;
+    }
+    header img{
+        height: 60px;
+        width: 120px;
+        margin-right:100%;
+    }
+    .logo{
+        padding: 0 40px;
+        line-height: 90px;
+    }
+    .menu-nav{
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        background: rgba(104, 104, 104, 0.61);
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 1px 0;
+
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+    }
+    .nav-iten-menu{
+        line-height: 80px;
+    }
+    .nav-link-menu:hover{
+        background-color: rgb(70, 69, 69);
+    }
+    .nav-link:hover,.nav-menu-link_active{
+        color: rgb(51, 131, 155);
+        transition: 0.5s;
+    }
+    
+    .nav-toggle{
+        display: block;
+        position:inherit;
+    }
+
+    .nav-menu_visible{
+        left: 0;
+    }
+    .nav-toggle:focus:not(:focus-visible){
+        outline: none;
+    }
+ }
+
